@@ -31,3 +31,5 @@ catch(err)
 {
 snowflake.execute({sqlText:`INSERT INTO TABLE_LOAD_ERROR_LIST(`+TABLE_SCHEMA+`,`+TABLE_NAME+`,`+start_timestamp+`,`+err.message+`);`});
 return 'failed with errorcode:'+err.code+' message:'+err.message;
+}
+$$;
